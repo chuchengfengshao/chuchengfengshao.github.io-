@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>宿杰空运</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <script src="js/jquery-latest.min.js"></script>
+
+    <script src="js/swiper.min.js"></script>
+    <style type="text/css">
+        html,body{
+            margin:0px;
+            padding:0px;
+            font-family: "微软雅黑";
+            font-size:12px;
+        }
+
+        #container{
+            max-width: 1920px;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a{color:#000000;text-decoration: none;}
+        a:hover{color:#FC5F02;}
+
+        .toplink{
+            overflow: hidden;
+            text-align: right;
+            margin:10px 0px 10px 0px;
+            padding-right: 180px;
+            /*border:1px solid #ff0000;*/
+
+        }
+
+        .toplink span{
+            padding:0px 8px;
+        }
+
+        .toplink .spiltter{
+            border-left: 1px solid #E1E1E1;
+        }
+
+        .nav{
+
+            height:85px;
+            line-height: 85px;
+            overflow: hidden;
+            padding:4px 40px;
+            border-bottom: 2px solid #3399ff;
+        }
+        .nav:after{
+            clear:both;
+        }
+
+        .nav .logo{
+            float:left;
+            width:180px;
+            height:85px;
+            line-height:85px;
+        }
+
+        .nav .menu{
+            float:left;
+            height: 72px;
+            line-height: 72px;	/*行间居中*/
+        }
+
+        .menu ul{
+            list-style: outside none none;
+        }
+
+        .menu li{
+            float: left;
+            text-align: center;	/*文字居中*/
+            font-size:16px;
+            margin-left:6px;
+        }
+        .menu a{
+            display: block; /*块极化元素*/
+            padding: 0px 24px;
+            border-radius:3px;
+        }
+        .menu a:hover,.active a{
+            color:#FFF;
+            background-color: #3399ff; /*鼠标移入链接时,li的背景色变化*/
+            border-radius:3px;
+        }
+
+
+        .contact{
+            margin-left:34px;
+            float:left;
+        }
+
+        .contact span{
+            display: inline-block;
+            height:34px;
+            line-height: 34px;
+        }
+
+        .contact .telnumber{
+            background: url(images/tel-icon.png) no-repeat;
+            padding-left:37px;
+        }
+
+        .telnumber label{
+            font-size:16px;
+            color: #fb6002;
+            font-weight: bold;
+        }
+
+        .contact .wechat{
+            background: url(images/wechat-icon.png) no-repeat;
+            padding-left:34px;
+            margin-left:10px;
+        }
+
+        .carousel { position: relative; overflow: auto;height:500px;width:100%;}
+        .carousel ul{padding:0px;margin: 0px;    padding-inline-start: 0px;}
+        .carousel li { list-style: none; }
+        .carousel ul li { float: left; }
+        .carousel ul li img{width: 100%;height: 500px}
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-container .swiper-slide{
+            height:450px;
+        }
+
+        .swiper-pagination-bullet{
+            width:12px;
+            height: 12px;
+        }
+
+        .swiper-slide {
+            width: 100%;
+
+            /* Center slide text vertically */
+            /*display: -webkit-box;*/
+            /*display: -ms-flexbox;*/
+            /*display: -webkit-flex;*/
+            /*display: flex;*/
+            /*-webkit-box-pack: center;*/
+            /*-ms-flex-pack: center;*/
+            /*-webkit-justify-content: center;*/
+            /*justify-content: center;*/
+            /*-webkit-box-align: center;*/
+            /*-ms-flex-align: center;*/
+            /*-webkit-align-items: center;*/
+            /*align-items: center;*/
+        }
+
+        .queryform{
+            position:absolute;
+            left:50%;
+            top:150px;
+            margin-left: -480px;
+            z-index: 9;
+            width:960px;
+            height: 400px;
+            /*background-color:#FFFFFF;*/
+            /*opacity:0.6;*/
+
+        }
+
+        .queryform .sologan{
+            width:100%;
+            height:90px;
+        }
+
+        .sologan .title,.title_desc{
+            width:500px;
+            margin:0px auto;
+            text-align: center;
+            color:#FFF;
+            padding: 5px 0px;
+        }
+
+        .sologan .title{
+            font-size:35px;
+            /*font-family: "HYRUN";*/
+        }
+
+        .sologan .title_desc{
+            font-size:18px;
+            /*font-family: "HYRUN";*/
+        }
+
+        .queryform .querybox{
+            width: 850px;
+            margin:15px auto;
+            text-align: center;
+            color:#FFF;
+        }
+
+        .queryform .querybox .tab{
+            list-style: outside none none;
+            /*padding-inline-start: 0px;*/
+            /*text-align: center;*/
+            padding: 0px;
+            margin: 0px;
+            height: 35px;
+        }
+
+        .queryform .querybox .tab li{
+            float: left;
+            text-align: center;	/*文字居中*/
+            font-size:15px;
+            margin: 0px 15px;
+            height: 25px;
+            line-height: 25px;
+            cursor: pointer;
+        }
+
+        .querybox .tab li:after{
+            clear:both;
+        }
+
+        .queryform .querybox .tab .active{
+            border-bottom:1px solid #3399ff;
+            /*border-color: transparent transparent transparent #3399ff;*/
+        }
+
+        .queryform .querybox .tab .active span{
+            position: relative;
+            /*border:1px solid #3399ff;*/
+            display: block;
+            width: 30px;
+            height: 20px;
+            border-color: transparent transparent transparent #3399ff;
+        }
+
+        .queryform .querybox .txtbox{
+            width: 100%;
+            height: 226px;
+            background-color: rgba(255,255,255,0.4);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .inputdiv{
+            /*border:1px solid #f00;*/
+            margin: 50px auto;
+        }
+        .txtbox label{
+            color:#FFF;
+            font-size: 14px;
+            margin-right:3px;
+        }
+
+        .txtbox .td{
+            padding: 0px 5px;
+        }
+
+        .txtbox input{
+            width: 200px;
+            height: 38px;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(255,255,255,0.5);
+            font-size: 14px;
+            color:#FFF;
+        }
+
+        .btndiv{
+            text-align: right;
+            padding-right: 35px;
+        }
+
+        .searchbtn{
+            width: 120px;
+            height: 35px;
+            color: #fff;
+            font-size: 14px;
+            background-color: #3399ff;
+            border: none;
+            border-radius: 3px;
+        }
+
+
+        .portfolio-item{
+            margin-bottom: 30px;
+        }
+        .portfolio-item .hover-bg{
+            height: 260px;
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hover-bg .hover-text {
+            position: absolute;
+            text-align: center;
+            margin: 0 auto;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.66);
+            padding: 25% 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .hover-bg .hover-text>button{
+            opacity: 0;
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            transition: all 0.3s;
+        }
+        .hover-bg:hover .hover-text>button{
+            opacity: 1;
+            -webkit-backface-visibility:hidden;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        .hover-bg:hover .hover-text{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="head">
+            <div class="toplink">
+                <span><a href="#">宿杰空运首页</a></span>
+                <span class="spiltter">你好，<a href="#">请登录</a></span>
+                <span class="spiltter"><a href="#">免费注册</a></span>
+                <span class="spiltter"><a href="#">我的订单中心</a></span>
+                <span class="spiltter"><a href="#">我的账户</a></span>
+                <span class="spiltter"><a href="#">兑换中心</a></span>
+            </div>
+            <!-- nav bar begin-->
+            <div class="nav">
+                <div class="logo">
+                    <img src="images/logo.png" width="180" height="84"/>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="active"><a  href="#">首页</a></li>
+                        <li><a href="#">空运价格</a></li>
+                        <li><a href="#">特价展示</a></li>
+                        <li><a href="#">FBA</a></li>
+                        <li><a href="#">空运工具</a></li>
+                        <li><a href="#">新闻资讯</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <span class="telnumber">
+                        <label>400-7727-356</label>
+                    </span>
+                    <span class="wechat">
+                        <label>&nbsp;</label>
+                    </span>
+
+                </div>
+            </div>
+            <!-- nav bar end -->
+            <!-- the banner begin -->
+            <div class="banner">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/banner01.png"/></div>
+                        <div class="swiper-slide"><img src="images/banner021.png"/></div>
+                        <div class="swiper-slide"><img src="images/banner01.png"/></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+                <div class="queryform">
+                    <div class="sologan">
+                        <div class="title">连接每个快递的故事</div>
+                        <div class="title_desc">全国真实航空件189,320件</div>
+                    </div>
+                    <div class="querybox">
+                        <ul class="tab">
+                            <li class="active">空运价格查询<span>&nbsp;</span></li>
+                            <li>HS编码查询<span>&nbsp;</span></li>
+                            <li>三字代码查询<span>&nbsp;</span></li>
+                            <li>货物跟踪查询<span>&nbsp;</span></li>
+                            <li>泡贷计算查询<span>&nbsp;</span></li>
+                        </ul>
+                        <div class="txtbox">
+                            <div class="inputdiv">
+                                <span class="td">
+                                    <label>起始港</label>
+                                    <span><input type="text" class="textbox"/></span>
+                                </span>
+                                <span class="td">
+                                    <label>目的港</label>
+                                    <span><input type="text" class="textbox"/></span>
+                                </span>
+                                <span class="td">
+                                    <label>是否达到</label>
+                                    <span><input type="text" class="textbox"/></span>
+                                </span>
+                            </div>
+                            <div class="btndiv">
+                                <button id="search" class="searchbtn" >搜索</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- the banner end -->
+
+        </div>
+
+        <div class="body">
+            <!-- discount module -->
+            <div class="discount">
+                <ul class="discount_tab">
+                    <li>
+                        <span class="lbl_cn">非洲空运特价</span>
+                        <span class="lbl_en">African Air special offer</span>
+                    </li>
+                    <li>
+                        <span>东南亚运特价</span>
+                        <span>Southeast Asian Air special offer</span>
+                    </li>
+                    <li>
+                        <span>中东空运特价</span>
+                        <span>Middle East Air special offer</span>
+                    </li>
+                    <li>
+                        <span>欧洲空运特价</span>
+                        <span>European Air special offer</span>
+                    </li>
+                </ul>
+                <div>
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <button id="search" class="searchbtn" >立即抢购</button>
+                                </div>
+                                <img src="images/组66.png" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- discount module end-->
+            <!-- the history order begin -->
+            <div class="historyorder">
+                <div class="title">
+
+                </div>
+                <div class="listbox">
+                    <div class="wrapper">
+                        <div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the history order end -->
+
+
+
+
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(function() {
+
+
+            var swiper = new Swiper('.swiper-container', {
+                // 滚动方向 horizontal/vertical
+                direction: 'horizontal',
+                // 自动播放
+                autoplay:2000,
+                // 是否循环播放
+                loop: true,
+                // 如果需要分页器（小圆点）
+                // 是否需要分页器
+                pagination: '.swiper-pagination',
+                // 点击分页器是否切换到对应的图片 是 true 否 false
+                paginationClickable:true,
+
+                // 如果需要前进后退按钮
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+
+                // 用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+                // 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+                // 操作包括触碰，拖动，点击pagination等。
+                autoplayDisableOnInteraction:false,
+            });
+        });
+
+
+    </script>
+</body>
+</html>
