@@ -1,48 +1,27 @@
 @charset "utf-8";
 
-html,body{
-    margin:0px;
-    padding:0px;
-    font-family: "微软雅黑";
-    font-size:12px;
-}
+html,body{margin:0px;padding:0px;font-family: "微软雅黑";font-size:12px;}
 
-#container{
-    max-width: 1920px;
-    min-width: 1366px;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
+#container{max-width: 1920px;min-width: 1366px;width: 100%;margin: 0px;padding: 0px;}
 
 a{color:#000000;text-decoration: none;}
 a:hover{color:#FC5F02;}
 
-.toplink{
-    overflow: hidden;
-    text-align: right;
-    margin:10px 0px 10px 0px;
-    padding-right: 180px;
-    /*border:1px solid #ff0000;*/
-}
-
+.toplink{overflow: hidden;text-align: right;margin:10px 0px 10px 0px;padding-right: 180px;}
 .toplink a:hover{color:#FC5F02;text-decoration: underline;}
+.toplink span{padding:0px 8px;}
 
-.toplink span{
-    padding:0px 8px;
-}
-
-.toplink .spiltter{
-    border-left: 1px solid #E1E1E1;
-}
+.toplink .spiltter{border-left: 1px solid #E1E1E1;}
 
 .nav{
     height:85px;
     line-height: 85px;
     overflow: hidden;
-    padding:4px 80px;
+    padding:4px 0px;
     border-bottom: 2px solid #3399ff;
+    width: 100%;
 }
+
 .nav:after{
     clear:both;
 }
@@ -52,28 +31,34 @@ a:hover{color:#FC5F02;}
     width:180px;
     height:85px;
     line-height:85px;
+    margin-left: 80px;
 }
 
 .nav .menu{
     float:left;
     height: 72px;
     line-height: 72px;	/*行间居中*/
-    padding-top:10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    overflow: hidden;
+    /*border: 1px solid #ff0000;*/
 }
 
 .menu ul{
     margin: 0px;
+    padding: 0px;
     list-style: outside none none;
+    /*border: 1px solid #ff0000;*/
+    overflow: hidden;
 }
 
 .menu li{
     float: left;
     text-align: center;	/*文字居中*/
-    font-size:16px;
     margin-left:6px;
 }
 .menu a{
-    font-size:20px;
+    font-size:18px;
     font-family: "微软雅黑";
     text-decoration: none;
     display: block; /*块极化元素*/
@@ -87,10 +72,11 @@ a:hover{color:#FC5F02;}
     border-radius:3px;
 }
 
-
 .contact{
-    margin-left:34px;
     float:right;
+    overflow: hidden;
+    margin-right:30px;
+    /*border:1px solid #ff0000;*/
 }
 
 .contact span{
