@@ -9,6 +9,7 @@ html,body{
 
 #container{
     max-width: 1920px;
+    min-width: 1366px;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -588,5 +589,112 @@ a:hover{color:#FC5F02;}
     width: 100%;
     height: auto;
 }
-
 /***客户展示 end***/
+
+/***footer begin***/
+
+.footer{
+    background-color: #000;
+    color:#fff;
+    height: 450px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.footer .company{
+    float: left;
+    width:30%;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-right: 1px solid #2d2d2d;
+}
+
+.company .c1,.company .c2{
+    font-size: 23px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+}
+
+.footer .company ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.footer .company ul li{
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.footer .links{
+    float:right;
+    width:60%;
+    margin: 20px 0px;
+    /*border: 1px solid #ededed;*/
+}
+
+.links .about{
+    font-size: 23px;
+    height: 50px;
+    line-height: 50px;
+}
+.links .aboutlink{
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom:1px solid #2d2d2d ;
+}
+
+.links .aboutlink span{
+    margin-right: 40px;
+}
+
+.subscription .ss1{
+    float: left;
+    /*border: 1px solid #cccccc;*/
+    width: 20%;
+
+}
+.ss1 h3{
+    font-size:20px;
+}
+.ss1 div{
+    height:167px;
+    width: 167px;
+}
+.ss2 h3{
+    font-size:20px;
+}
+.subscription .ss2{
+    float: right;
+    /*border: 1px solid #cccccc;*/
+    margin-left:30px ;
+    width: 60%;
+}
+.subscription .ss2 span{
+    float: left;
+    padding-right: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+.footer .copyright {
+    font-size:16px;
+    overflow: hidden;
+    text-align: center;
+    height: 35px;
+    border-top:1px solid #2d2d2d ;
+}
+.footer  .copyright span{
+    width: 500px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+}
+
+/****footer end***/
+
