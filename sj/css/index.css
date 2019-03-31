@@ -692,3 +692,145 @@ a:hover{color:#FC5F02;}
 
 /****footer end***/
 
+/**** the news begin*****/
+.news{
+    overflow: hidden;
+    height: 530px;
+    margin: 50px 80px;
+}
+.news .newsinfo{
+    float: left;
+    width: 48%;
+
+}
+.newsinfo .headdiv,.notice .headdiv{
+    height: 80px;
+    /*line-height: 80px;*/
+    /*border:1px solid #ff0000;*/
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #ededed;
+}
+.headdiv .title{
+    float: left;
+    position: absolute;
+    left:0px;
+    top:0px;
+    margin:8px 20px;
+    /*border:1px solid #ff0000;*/
+}
+.headdiv .moreinfo{
+    background-image: url("../images/more-icon.png") ;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right:22px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    margin: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    /*border:1px solid #ff0000;*/
+}
+.headdiv:after{
+    clear:both;
+}
+
+.headdiv .tit_cn{
+    font-size:28px;
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    line-height: 40px;
+    /*border:1px solid #ff0000;*/
+}
+.headdiv .tit_en{
+    font-size:16px;
+    margin: 0px;
+    padding: 0px;
+    height: 20px;
+    line-height: 20px;
+    color:#ededed;
+    /*border:1px solid #ff0000;*/
+}
+
+.newsinfo .content{
+    padding: 10px;
+}
+.content .grp{
+    padding: 5px;
+    border-bottom: 1px dashed #d8d8d8;
+    cursor: pointer;
+}
+.content .grp .btnbox{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    text-align: right;
+    overflow: hidden;
+    height: 25px;
+    line-height: 25px;
+    /*border-bottom: 1px dashed #d8d8d8;*/
+}
+
+.content .grp:hover{
+    background-color: #fcfcfc;
+}
+
+.content .grp:hover .btn_detail{
+    display:block;
+}
+
+.content p{
+    text-indent:2em;
+    line-height: 2em;
+    color:#666666;
+}
+
+.content .tt{
+    font-size:16px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    width:58%;
+    /*float: left;*/
+    /*border:1px solid #ff0000;*/
+    text-align: left;
+}
+
+.content .tm{
+    font-size:13px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    width:39%;
+    margin-right: 6px;
+    /*border:1px solid #ff0000;*/
+    text-align: right;
+    /*float: right;*/
+}
+
+.content .btn_detail{
+    width: 75px;
+    height: 25px;
+    color: #fff;
+    font-size: 13px;
+    background-color: #3399ff;
+    border: none;
+    border-radius: 3px;
+    display: none;
+    margin-left:80%;
+}
+
+
+.news .notice{
+    float:right;
+    width: 48%;
+}
+
+/**** the news end*****/
+
