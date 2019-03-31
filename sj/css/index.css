@@ -122,15 +122,22 @@ a:hover{color:#FC5F02;}
     bottom: 20px;
 }
 
+.banner{
+    position: relative;
+}
+
 
 .queryform{
     position:absolute;
-    left:50%;
-    top:180px;
-    margin-left: -480px;
     z-index: 9;
     width:960px;
     height: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*border:1px solid #ff0000;*/
+    top:20px;
+    /*transform: translate(-50%, 0px);    !* 50%为自身尺寸的一半 *!*/
     /*background-color:#FFFFFF;*/
     /*opacity:0.6;*/
 }
@@ -167,6 +174,7 @@ a:hover{color:#FC5F02;}
     margin:15px auto;
     text-align: center;
     color:#FFF;
+    /*border:1px solid #dddddd;*/
 }
 
 
