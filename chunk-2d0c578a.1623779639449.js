@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c578a"],{"3edf":function(e,n,c){"use strict";c.r(n);var t=function(){var e=this,n=e.$createElement,c=e._self._c||n;return c("div",[e._v(" NFT ")])},a=[],u={name:"NFT"},r=u,s=c("2877"),i=Object(s["a"])(r,t,a,!1,null,"3c84ecfc",null);n["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0c578a.1623779639449.js.map
